@@ -1,0 +1,19 @@
+{
+  "name": "ti4-hb-loxon",
+  "version": "1.0.0",
+  "repository": "git@github.com:darrellanderson/ti4-hb-loxon.git",
+  "license": "Unlicense",
+"scripts": {
+    "setup": "ttpg-scripts setup",
+    "dev": "ttpg-scripts dev",
+    "clean": "ttpg-scripts clean",
+    "reset": "ttpg-scripts reset",
+    "build": "ttpg-scripts build",
+    "purge": "ttpg-scripts purge",
+    "libpack": "ttpg-scripts libpack",
+    "watch": "ttpg-scripts watch"
+},
+  "devDependencies": {
+    "ttpg-scripts": "^1.5.0"
+  }
+}

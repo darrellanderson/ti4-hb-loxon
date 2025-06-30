@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:darrellanderson/ti4-hb-loxon.git",
   "license": "Unlicense",
-"scripts": {
+  "scripts": {
     "setup": "ttpg-scripts setup",
     "dev": "ttpg-scripts dev",
     "clean": "ttpg-scripts clean",
@@ -12,7 +12,7 @@
     "purge": "ttpg-scripts purge",
     "libpack": "ttpg-scripts libpack",
     "watch": "ttpg-scripts watch"
-},
+  },
   "devDependencies": {
     "ttpg-scripts": "^1.5.0"
   }

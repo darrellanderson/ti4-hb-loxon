@@ -1,10 +1,1 @@
-{
-  "name": "ti4-hb-loxon",
-  "slug": "ti4-hb-loxon",
-  "template": "typescript",
-  "version": "1.0.0",
-  "guid": {
-    "dev": "CE6700E47F654CEA8BECF570AEF9BFD5",
-    "prd": "C9F999182230490482CE0CF7DAD7C34C"
-  }
-}
+{"name":"ti4-hb-loxon","slug":"ti4-hb-loxon","version":"1.0.0","guid":{"dev":"CE6700E47F654CEA8BECF570AEF9BFD5","prd":"C9F999182230490482CE0CF7DAD7C34C"},"transpile":true}

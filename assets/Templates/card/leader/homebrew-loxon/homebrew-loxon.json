@@ -1,0 +1,91 @@
+{
+    "Type": "Card",
+    "GUID": "00B0B5A5B53527C05CE4759F070173BD",
+    "Name": "leader",
+    "Metadata": "",
+    "CollisionType": "Regular",
+    "Friction": 0.7,
+    "Restitution": 0,
+    "Density": 0.5,
+    "SurfaceType": "Cardboard",
+    "Roughness": 1,
+    "Metallic": 0,
+    "PrimaryColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+    },
+    "SecondaryColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+    },
+    "Flippable": true,
+    "AutoStraighten": false,
+    "ShouldSnap": true,
+    "ScriptName": "",
+    "Blueprint": "",
+    "Models": [],
+    "Collision": [],
+    "SnapPointsGlobal": false,
+    "SnapPoints": [],
+    "ZoomViewDirection": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+    },
+    "FrontTexture": "card/leader/homebrew-loxon/homebrew-loxon.face.jpg",
+    "BackTexture": "card/leader/homebrew-loxon/homebrew-loxon.back.jpg",
+    "HiddenTexture": "",
+    "BackIndex": -3,
+    "HiddenIndex": -1,
+    "NumHorizontal": 1,
+    "NumVertical": 4,
+    "Width": 6.3,
+    "Height": 4.2,
+    "Thickness": 0.05,
+    "HiddenInHand": true,
+    "UsedWithCardHolders": true,
+    "CanStack": true,
+    "UsePrimaryColorForSide": false,
+    "FrontTextureOverrideExposed": false,
+    "AllowFlippedInStack": false,
+    "MirrorBack": true,
+    "Model": "Rounded",
+    "Indices": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "CardNames": {
+        "0": "Shahm Kewr",
+        "1": "Daahzi Pohip",
+        "2": "Fractured Spyglass",
+        "3": "Surveyor"
+    },
+    "CardMetadata": {
+        "0": "card.leader.agent:homebrew.loxon/shahm-kewr",
+        "1": "card.leader.commander:homebrew.loxon/daahzi-pohip",
+        "2": "card.leader.hero:homebrew.loxon/fractured-spyglass",
+        "3": "card.leader.mech:homebrew.loxon/surveyor"
+    },
+    "CardTags": {
+        "0": [
+            "card-leader"
+        ],
+        "1": [
+            "card-leader"
+        ],
+        "2": [
+            "card-leader"
+        ],
+        "3": [
+            "card-leader"
+        ]
+    },
+    "GroundAccessibility": "ZoomAndContext",
+    "Tags": [
+        "card-leader"
+    ]
+}

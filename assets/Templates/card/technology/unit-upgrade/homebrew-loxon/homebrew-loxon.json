@@ -1,0 +1,75 @@
+{
+    "Type": "Card",
+    "GUID": "812935EAAAC1369DD771972173DFB888",
+    "Name": "technology/unit-upgrade",
+    "Metadata": "",
+    "CollisionType": "Regular",
+    "Friction": 0.7,
+    "Restitution": 0,
+    "Density": 0.5,
+    "SurfaceType": "Cardboard",
+    "Roughness": 1,
+    "Metallic": 0,
+    "PrimaryColor": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+    },
+    "SecondaryColor": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+    },
+    "Flippable": true,
+    "AutoStraighten": false,
+    "ShouldSnap": true,
+    "ScriptName": "",
+    "Blueprint": "",
+    "Models": [],
+    "Collision": [],
+    "SnapPointsGlobal": false,
+    "SnapPoints": [],
+    "ZoomViewDirection": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+    },
+    "FrontTexture": "card/technology/unit-upgrade/homebrew-loxon/homebrew-loxon.face.jpg",
+    "BackTexture": "card/technology/unit-upgrade/homebrew-loxon/homebrew-loxon.back.jpg",
+    "HiddenTexture": "",
+    "BackIndex": -2,
+    "HiddenIndex": -1,
+    "NumHorizontal": 1,
+    "NumVertical": 1,
+    "Width": 6.3,
+    "Height": 4.2,
+    "Thickness": 0.05,
+    "HiddenInHand": true,
+    "UsedWithCardHolders": true,
+    "CanStack": true,
+    "UsePrimaryColorForSide": false,
+    "FrontTextureOverrideExposed": false,
+    "AllowFlippedInStack": false,
+    "MirrorBack": true,
+    "Model": "Rounded",
+    "Indices": [
+        0
+    ],
+    "CardNames": {
+        "0": "Resolute 2"
+    },
+    "CardMetadata": {
+        "0": "card.technology.unit-upgrade:homebrew.loxon/resolute-2"
+    },
+    "CardTags": {
+        "0": [
+            "card-technology-unit-upgrade",
+            "card-technology"
+        ]
+    },
+    "GroundAccessibility": "ZoomAndContext",
+    "Tags": [
+        "card-technology-unit-upgrade",
+        "card-technology"
+    ]
+}

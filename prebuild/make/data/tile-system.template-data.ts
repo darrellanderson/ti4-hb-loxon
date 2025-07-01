@@ -1,0 +1,115 @@
+export const TILE_SYSTEM_TEMPLATE = {
+  Type: "Generic",
+  GUID: "", // hex string
+  Name: "", // e.g. "Tile 018"
+  Metadata: "", // e.g. "tile.system:base/18",
+  CollisionType: "Regular",
+  Friction: 0.7,
+  Restitution: 0.3,
+  Density: 0.93,
+  SurfaceType: "Cardboard",
+  Roughness: 1,
+  Metallic: 0,
+  PrimaryColor: {
+    R: 255,
+    G: 255,
+    B: 255,
+  },
+  SecondaryColor: {
+    R: 0,
+    G: 0,
+    B: 0,
+  },
+  Flippable: true,
+  AutoStraighten: false,
+  ShouldSnap: false,
+  ScriptName: "",
+  Blueprint: "",
+  Models: [
+    {
+      Model: "tile/system/system-tile.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1.5,
+        Y: 1.5,
+        Z: 1,
+      },
+      Rotation: {
+        X: -0,
+        Y: 0,
+        Z: 0,
+      },
+      Texture: "", // face, e.g. "tile/system/base/tile_018.jpg",
+      NormalMap: "",
+      ExtraMap: "",
+      ExtraMap2: "",
+      IsTransparent: false,
+      CastShadow: true,
+      IsTwoSided: false,
+      UseOverrides: true,
+      SurfaceType: "Cardboard",
+    },
+    {
+      Model: "tile/system/system-tile.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1.5,
+        Y: 1.5,
+        Z: 1,
+      },
+      Rotation: {
+        X: 180,
+        Y: 0,
+        Z: 0,
+      },
+      Texture: "", // back, e.g.
+      NormalMap: "",
+      ExtraMap: "",
+      ExtraMap2: "",
+      IsTransparent: false,
+      CastShadow: true,
+      IsTwoSided: false,
+      UseOverrides: true,
+      SurfaceType: "Cardboard",
+    },
+  ],
+  Collision: [
+    {
+      Model: "tile/system/system-tile.col.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1.5,
+        Y: 1.5,
+        Z: 1,
+      },
+      Rotation: {
+        X: -0,
+        Y: 0,
+        Z: 0,
+      },
+      Type: "Convex",
+    },
+  ],
+  Lights: [],
+  SnapPointsGlobal: false,
+  SnapPoints: [],
+  ZoomViewDirection: {
+    X: 0,
+    Y: 0,
+    Z: 1,
+  },
+  GroundAccessibility: "ZoomAndContext",
+  Tags: [],
+};

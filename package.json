@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/klaw-sync": "^6.0.5",
     "klaw-sync": "^7.0.0",
+    "sharp": "^0.34.2",
     "ttpg-scripts": "^1.5.0"
   }
 }

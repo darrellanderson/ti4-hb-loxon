@@ -7,12 +7,10 @@
  * - assets/Textures/tile/system/tile-{tile}.jpg
  */
 
-//import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
-import { SOURCE_TO_SYSTEM_DATA } from "../../src/lib/system-lib/data/system.data";
 import { TILE_SYSTEM_TEMPLATE } from "./data/tile-system.template-data";
 import { getGuid } from "./lib/guid";
 
@@ -27,64 +25,36 @@ type TileInfo = {
   templateFile: string;
 };
 
-// Generate a "tile 0" blank tile.
-SOURCE_TO_SYSTEM_DATA["base"]?.push({
-  tile: 0,
-});
-
 // Assemble tile info records.
 const infos: Array<TileInfo> = [];
-for (const [source, systemSchemas] of Object.entries(SOURCE_TO_SYSTEM_DATA)) {
-  for (const systemSchema of systemSchemas) {
-    const tile: number = systemSchema.tile;
-    if (tile < 0) {
-      continue;
-    }
 
-    const tileStr: string = tile.toString().padStart(3, "0");
-    const name: string = `Tile ${tileStr}`;
-    const nsid: string = `tile.system:${source}/${tile}`;
-    const imgFileFace: string = `tile/system/tile-${tileStr}.jpg`;
-    const modelFileFace: string =
-      systemSchema.class === "off-map"
-        ? "tile/system/system-tile-off-map.face.obj"
-        : "tile/system/system-tile.obj";
-    const modelFileBack: string =
-      systemSchema.class === "off-map"
-        ? "tile/system/system-tile-off-map.back.obj"
-        : "tile/system/system-tile.obj";
+const tile: number = 3001;
+const source: string = "homebrew.loxon";
 
-    const templateFile: string = `tile/system/tile-${tileStr}.json`;
+const tileStr: string = tile.toString().padStart(3, "0");
+const name: string = `Tile ${tileStr}`;
+const nsid: string = `tile.system:${source}/${tile}`;
+const imgFileFace: string = `tile/system/tile-${tileStr}.jpg`;
+const modelFileFace: string = "tile/system/system-tile.obj";
+const modelFileBack: string = "tile/system/system-tile.obj";
 
-    const guid: string = getGuid(templateFile);
+const templateFile: string = `tile/system/tile-${tileStr}.json`;
 
-    // Back will vary.
-    let imgFileBack: string = "";
-    if (systemSchema.imgFaceDown) {
-      imgFileBack = `tile/system/tile-${tileStr}.back.jpg`;
-    } else if (systemSchema.isHome) {
-      imgFileBack = "tile/system/green.back.jpg";
-    } else if (
-      (systemSchema.anomalies ?? []).length > 0 ||
-      (systemSchema.planets ?? []).length === 0
-    ) {
-      imgFileBack = "tile/system/red.back.jpg";
-    } else {
-      imgFileBack = "tile/system/blue.back.jpg";
-    }
+const guid: string = getGuid(templateFile);
 
-    infos.push({
-      guid,
-      name,
-      nsid,
-      imgFileFace,
-      imgFileBack,
-      modelFileFace,
-      modelFileBack,
-      templateFile,
-    });
-  }
-}
+// Back will vary.
+const imgFileBack: string = "tile/system/green.back.jpg";
+
+infos.push({
+  guid,
+  name,
+  nsid,
+  imgFileFace,
+  imgFileBack,
+  modelFileFace,
+  modelFileBack,
+  templateFile,
+});
 
 // Validate the input files.
 const errors: Array<string> = [];
@@ -145,25 +115,8 @@ for (const info of infos) {
 async function transformImage(filename: string) {
   console.log(`Transforming image: ${filename}`);
 
-  // Apply image transform to the face.
-  const brightness: number = 1.2;
-  const saturation: number = 1.3;
-  const contrast: number = 0.7;
-
   let img = sharp(filename);
-
-  // The CLAHE "contrast limiting adaptive histogram equalization"
-  // operation gives poor results (tried varying both size and slope).
-  // Instead, do a linear clamp about 0.5 and let brightness shift
-  // it if necessary.
-  img = await img.linear(contrast, 128 - 128 * contrast);
-  img = await img.modulate({
-    brightness: brightness,
-    saturation: saturation,
-  });
-
   const buffer: Buffer = await img.toBuffer();
-  await sharp(buffer).toFile(filename);
 
   // Now write a PNG version for UI.
   const mask = await sharp("prebuild/tile/system/blank.png")
@@ -181,11 +134,6 @@ async function transformImage(filename: string) {
     .resize(512, 512, { fit: "fill" })
     .joinChannel(mask)
     .toFile(pngFile);
-
-  // Convert to DDS.  (No, apparently DDS files not supported?)
-  //const ddsFile: string = pngFile.replace(/.png$/, ".dds");
-  //const command: string = `magick convert "${pngFile}" "${ddsFile}"`;
-  //execSync(command);
 }
 
 async function transformImages() {

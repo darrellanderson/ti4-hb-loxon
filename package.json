@@ -18,5 +18,9 @@
     "klaw-sync": "^7.0.0",
     "sharp": "^0.34.2",
     "ttpg-scripts": "^1.5.0"
+  },
+  "dependencies": {
+    "@tabletop-playground/api": "^0.41.0",
+    "ti4-ttpg-ts-types": "^1.0.6"
   }
 }

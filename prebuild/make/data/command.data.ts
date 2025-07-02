@@ -1,0 +1,83 @@
+export const COMMAND_TOKEN_TEMPLATE = {
+  Type: "Generic",
+  GUID: "$",
+  Name: "Command ($)",
+  Metadata: "token.command:$/$",
+  CollisionType: "Regular",
+  Friction: 0.7,
+  Restitution: 0.3,
+  Density: 1,
+  SurfaceType: "Cardboard",
+  Roughness: 1,
+  Metallic: 0,
+  PrimaryColor: {
+    R: 255,
+    G: 255,
+    B: 255,
+  },
+  SecondaryColor: {
+    R: 0,
+    G: 0,
+    B: 0,
+  },
+  Flippable: true,
+  AutoStraighten: false,
+  ShouldSnap: false,
+  ScriptName: "",
+  Blueprint: "",
+  Models: [
+    {
+      Model: "token/command.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1,
+        Y: 1,
+        Z: 1,
+      },
+      Rotation: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Texture: "token/command-control/$.jpg",
+      NormalMap: "",
+      ExtraMap: "token/command-control/mask.png",
+      IsTransparent: false,
+      CastShadow: true,
+      UseOverrides: true,
+      SurfaceType: "Cardboard",
+    },
+  ],
+  Collision: [
+    {
+      Model: "token/command.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1,
+        Y: 1,
+        Z: 1,
+      },
+      Rotation: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Type: "Convex",
+    },
+  ],
+  SnapPointsGlobal: false,
+  SnapPoints: [],
+  ZoomViewDirection: {
+    X: 0,
+    Y: 0,
+    Z: 0,
+  },
+};

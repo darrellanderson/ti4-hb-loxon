@@ -1,5 +1,5 @@
 import { refPackageId } from "@tabletop-playground/api";
-import { HomebrewRegistry } from "ti4-ttpg-ts-types";
+import {} from "ti4-ttpg-ts-types"; // declares global TI4
 import { NSID_TO_TEMPLATE_ID } from "nsid/nsid-to-template-id";
 
 const packageId: string = refPackageId;
@@ -77,6 +77,24 @@ process.nextTick(() => {
         name: "Resolute 2",
         nsidName: "resolute-2",
         hasSustainDamage: true,
+      },
+    ],
+
+    technologies: [
+      {
+        name: "Universal Docking Protocols",
+        nsidName: "universal-docking-protocols",
+        color: "yellow",
+        prerequisites: { yellow: 1 },
+        isFactionTech: true,
+      },
+      {
+        name: "Resolute 2",
+        nsidName: "resolute-2",
+        replacesNsidName: "resolute",
+        color: "unit-upgrade",
+        prerequisites: { red: 2 },
+        isFactionTech: true,
       },
     ],
 

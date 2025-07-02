@@ -8,6 +8,8 @@ export const NSID_TO_TEMPLATE_ID: { [key: string]: string } = {
     "card.technology.yellow:homebrew.loxon/universal-docking-protocols": "C6BA93499C48DC2018F4F38CA61BDAAD",
     "sheet.faction:homebrew.loxon/loxon": "8BAB8021A6CE542EB942561A27CE063C",
     "tile.system:homebrew.loxon/3001": "35EB7472031E9790C95372E22B8C9F82",
-    "token.attachment.planet:homebrew.loxon/loxon-a": "2958B8F434E665EC10881235634DB10B"
+    "token.attachment.planet:homebrew.loxon/loxon-a": "2958B8F434E665EC10881235634DB10B",
+    "token.command:homebrew.loxon/loxon": "8056B6B6DE95E5FDBADDF9050CF1CD83",
+    "token.control:homebrew.loxon/loxon": "765CC21E674A7E179DF4C380FD8A26FF"
 }
 ;

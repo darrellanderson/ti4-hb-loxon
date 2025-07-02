@@ -1,0 +1,83 @@
+export const CONTROL_TOKEN_TEMPLATE = {
+  Type: "Generic",
+  GUID: "$",
+  Name: "Control ($)",
+  Metadata: "token.control:$/$",
+  CollisionType: "Regular",
+  Friction: 0.7,
+  Restitution: 0.3,
+  Density: 1,
+  SurfaceType: "Cardboard",
+  Roughness: 1,
+  Metallic: 0,
+  PrimaryColor: {
+    R: 255,
+    G: 255,
+    B: 255,
+  },
+  SecondaryColor: {
+    R: 0,
+    G: 0,
+    B: 0,
+  },
+  Flippable: false,
+  AutoStraighten: false,
+  ShouldSnap: false,
+  ScriptName: "",
+  Blueprint: "",
+  Models: [
+    {
+      Model: "token/control.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1,
+        Y: 1,
+        Z: 1,
+      },
+      Rotation: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Texture: "token/command-control/$.png",
+      NormalMap: "",
+      ExtraMap: "token/command-control/mask.png",
+      IsTransparent: false,
+      CastShadow: true,
+      UseOverrides: true,
+      SurfaceType: "Plastic",
+    },
+  ],
+  Collision: [
+    {
+      Model: "token/control.obj",
+      Offset: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Scale: {
+        X: 1,
+        Y: 1,
+        Z: 1,
+      },
+      Rotation: {
+        X: 0,
+        Y: 0,
+        Z: 0,
+      },
+      Type: "Convex",
+    },
+  ],
+  SnapPointsGlobal: false,
+  SnapPoints: [],
+  ZoomViewDirection: {
+    X: 0,
+    Y: 0,
+    Z: 0,
+  },
+};

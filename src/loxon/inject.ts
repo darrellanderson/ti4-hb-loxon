@@ -33,7 +33,7 @@ const factions: Array<FactionSchemaType> = [
       mechs: ["surveyor"],
     },
     promissories: ["exotic-locale"],
-    startingTechs: ["duranium-arbor"],
+    startingTechs: ["duranium-armor"],
     startingUnits: { flagship: 1, destroyer: 2, infantry: 4, spaceDock: 1 },
     unitOverrides: ["arill-queen", "resolute", "resolute-2"],
     extras: [{ nsid: "token.attachment.planet:homebrew.loxon/loxon-a" }],
